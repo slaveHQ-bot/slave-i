@@ -1,0 +1,29 @@
+{
+  "name": "slave-os",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"pnpm -F @slave/core dev\" \"pnpm -F slave-desktop dev\"",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r test",
+    "verify:fast": "node scripts/verify-fast.js",
+    "verify": "node scripts/verify.js",
+    "repo:inspect": "node scripts/repo-inspect.js"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.2.0",
+    "@types/node": "^20.19.43",
+    "autoprefixer": "^10.5.4",
+    "concurrently": "^10.0.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4"
+  }
+}

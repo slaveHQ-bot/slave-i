@@ -1,0 +1,54 @@
+{
+  "name": "slave-desktop",
+  "version": "1.0.0",
+  "description": "Slave OS Desktop Client",
+  "author": "Slave Team",
+  "main": "dist/main/index.js",
+  "build": {
+    "productName": "SlaveOS",
+    "linux": {
+      "executableName": "slaveos"
+    },
+    "files": [
+      "dist",
+      "../../dist/renderer"
+    ]
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && electron-builder",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.43",
+    "@libsql/client": "^0.17.4",
+    "better-sqlite3": "^13.0.3",
+    "bufferutil": "^4.1.0",
+    "clsx": "^2.1.1",
+    "drizzle-orm": "^0.45.2",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.460.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "screenshot-desktop": "^1.15.6",
+    "tailwind-merge": "^2.5.4",
+    "utf-8-validate": "^6.0.6",
+    "ws": "^8.21.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.2.0",
+    "@slave/core": "workspace:*",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "electron": "^32.0.0",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-electron": "^0.28.6",
+    "vite-plugin-electron-renderer": "^0.14.5"
+  }
+}

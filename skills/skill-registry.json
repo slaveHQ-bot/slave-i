@@ -1,0 +1,667 @@
+[
+  {
+    "name": "browser",
+    "path": "automation/browser/SKILL.md",
+    "category": "engineering",
+    "description": "Control and inspect browser sessions.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "browser",
+      "web",
+      "automation"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "computer-control",
+    "path": "automation/computer-control/SKILL.md",
+    "category": "engineering",
+    "description": "Control desktop environment and execute OS commands.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "os",
+      "desktop",
+      "control"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "agent-protocol",
+    "path": "core/agent-protocol/SKILL.md",
+    "category": "core",
+    "description": "Standard communication and negotiation protocol for all agents.",
+    "core": true,
+    "alwaysLoad": true,
+    "triggers": [
+      "protocol",
+      "communication"
+    ],
+    "requiredSkills": [],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "elite-engineer",
+    "path": "core/elite-engineer/SKILL.md",
+    "category": "core",
+    "description": "High-level engineering mindset, problem solving, and architecture rules.",
+    "core": true,
+    "alwaysLoad": true,
+    "triggers": [
+      "engineering",
+      "architecture",
+      "mindset"
+    ],
+    "requiredSkills": [],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "evidence-reporter",
+    "path": "core/evidence-reporter/SKILL.md",
+    "category": "core",
+    "description": "Rules for producing verifiable, evidence-backed reports.",
+    "core": true,
+    "alwaysLoad": true,
+    "triggers": [
+      "report",
+      "evidence",
+      "verification"
+    ],
+    "requiredSkills": [],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "repo-explorer",
+    "path": "core/repo-explorer/SKILL.md",
+    "category": "core",
+    "description": "Guidelines for navigating, inspecting, and understanding the codebase before execution.",
+    "core": true,
+    "alwaysLoad": true,
+    "triggers": [
+      "exploration",
+      "inspection",
+      "search"
+    ],
+    "requiredSkills": [],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "task-executor",
+    "path": "core/task-executor/SKILL.md",
+    "category": "core",
+    "description": "Standard procedures for executing and validating a delegated task.",
+    "core": true,
+    "alwaysLoad": true,
+    "triggers": [
+      "execution",
+      "task",
+      "implementation"
+    ],
+    "requiredSkills": [],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "design-system",
+    "path": "design/design-system/SKILL.md",
+    "category": "design",
+    "description": "Maintain and apply the global design system.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "design",
+      "css",
+      "theme"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "product-manager",
+    "path": "design/product-manager/SKILL.md",
+    "category": "product",
+    "description": "Translate user intent into product requirements and scope.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "product",
+      "requirements",
+      "scope"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "ui-ux",
+    "path": "design/ui-ux/SKILL.md",
+    "category": "design",
+    "description": "Design rich, accessible, and user-friendly interfaces.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "ui",
+      "ux",
+      "interface"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "ux-research",
+    "path": "design/ux-research/SKILL.md",
+    "category": "design",
+    "description": "Analyze user behavior and design best practices.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "research",
+      "ux",
+      "behavior"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "backend",
+    "path": "engineering/backend/SKILL.md",
+    "category": "engineering",
+    "description": "Implement server-side logic, API endpoints, and business rules.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "backend",
+      "api",
+      "server"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "database",
+    "path": "engineering/database/SKILL.md",
+    "category": "engineering",
+    "description": "Design schemas, write migrations, and optimize queries.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "database",
+      "sql",
+      "schema"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "electron",
+    "path": "engineering/electron/SKILL.md",
+    "category": "engineering",
+    "description": "Build and maintain the Electron main process and IPC boundary.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "electron",
+      "desktop",
+      "ipc"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "frontend",
+    "path": "engineering/frontend/SKILL.md",
+    "category": "engineering",
+    "description": "Implement UI components and client-side logic.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "frontend",
+      "react",
+      "ui"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "devops",
+    "path": "infrastructure/devops/SKILL.md",
+    "category": "infrastructure",
+    "description": "Manage CI/CD, build processes, and infrastructure.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "devops",
+      "ci",
+      "build"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "release",
+    "path": "infrastructure/release/SKILL.md",
+    "category": "infrastructure",
+    "description": "Coordinate and execute software releases.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "release",
+      "versioning",
+      "publish"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "agent-systems",
+    "path": "intelligence/agent-systems/SKILL.md",
+    "category": "intelligence",
+    "description": "Design and maintain agent runtimes, registries, and orchestration.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "agent",
+      "runtime",
+      "orchestration"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "llm",
+    "path": "intelligence/llm/SKILL.md",
+    "category": "intelligence",
+    "description": "Integrate model providers and handle prompt engineering.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "llm",
+      "prompt",
+      "model"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "memory",
+    "path": "intelligence/memory/SKILL.md",
+    "category": "intelligence",
+    "description": "Manage vector stores, context graphs, and episodic memory.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "memory",
+      "vector",
+      "context"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "architecture-reviewer",
+    "path": "main-agent/architecture-reviewer/SKILL.md",
+    "category": "main-agent",
+    "description": "Review architectural proposals and enforce boundaries.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "review",
+      "architecture",
+      "boundaries"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "cto-orchestrator",
+    "path": "main-agent/cto-orchestrator/SKILL.md",
+    "category": "main-agent",
+    "description": "Plan, delegate, coordinate, and review all agent work.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "cto",
+      "orchestration",
+      "planning"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "engineering-planner",
+    "path": "main-agent/engineering-planner/SKILL.md",
+    "category": "main-agent",
+    "description": "Break down goals into execution graphs and parallel tasks.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "planning",
+      "task-graph",
+      "breakdown"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "code-review",
+    "path": "quality/code-review/SKILL.md",
+    "category": "quality",
+    "description": "Review code for correctness, maintainability, and style.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "review",
+      "code",
+      "quality"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "performance",
+    "path": "quality/performance/SKILL.md",
+    "category": "quality",
+    "description": "Analyze and optimize system performance and resource usage.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "performance",
+      "optimization",
+      "speed"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "qa",
+    "path": "quality/qa/SKILL.md",
+    "category": "quality",
+    "description": "Write and execute test plans, verify outcomes.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "qa",
+      "testing",
+      "verification"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "security",
+    "path": "quality/security/SKILL.md",
+    "category": "quality",
+    "description": "Audit code for vulnerabilities and enforce security boundaries.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "security",
+      "audit",
+      "vulnerability"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "competitive-intelligence",
+    "path": "research/competitive-intelligence/SKILL.md",
+    "category": "research",
+    "description": "Analyze competitors and market trends.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "research",
+      "competitors",
+      "market"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  },
+  {
+    "name": "research",
+    "path": "research/research/SKILL.md",
+    "category": "research",
+    "description": "Conduct general technical and domain research.",
+    "core": false,
+    "alwaysLoad": false,
+    "triggers": [
+      "research",
+      "investigation",
+      "analysis"
+    ],
+    "requiredSkills": [
+      "elite-engineer",
+      "repo-explorer",
+      "task-executor",
+      "evidence-reporter",
+      "agent-protocol"
+    ],
+    "recommendedSkills": [],
+    "relatedSkills": [],
+    "conflicts": [],
+    "version": "1.0.0"
+  }
+]

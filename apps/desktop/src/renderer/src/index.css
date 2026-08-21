@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #18181B; /* Anthropic/Tailwind Zinc-900 */
+  --color-surface: #27272A; /* Zinc-800 */
+  --color-primary: #f4f4f5; /* Zinc-100 */
+  --color-primary-hover: #d4d4d8; /* Zinc-300 */
+  --color-text: #E4E4E7; /* Zinc-200 */
+  --color-muted: #A1A1AA; /* Zinc-400 */
+  --color-border: #3F3F46; /* Zinc-700 */
+}
+
+:root {
+  font-size: 16px; /* Base size for rem scaling */
+  
+  /* Core Colors */
+  --color-background: #000000; /* True black */
+  --color-surface: #0a0a0a; /* Subtle dark grey surface */
+  --color-surface-hover: #171717;
+  --color-surface-active: #262626;
+  
+  /* Text */
+  --color-text: #ffffff; /* Pure white */
+  --color-muted: #a3a3a3; /* Neutral-400 */
+  --color-subtle: #525252; /* Neutral-600 */
+  
+  /* Accent & Semantic */
+  --color-primary: #ffffff;
+  --color-primary-dim: rgba(255, 255, 255, 0.1);
+  --color-accent: #a855f7; /* Purple */
+  --color-accent-dim: rgba(168, 85, 247, 0.15);
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Borders */
+  --color-border: #262626; /* Neutral-800 */
+  --color-border-subtle: #171717; /* Neutral-900 */
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Accessibility focus rings */
+  *:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+  }
+}
+
+/* Custom scrollbar for pure black aesthetic */
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 1rem;
+  border: 2px solid var(--color-background); /* adds padding effect */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
