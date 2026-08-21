@@ -1,0 +1,30 @@
+{
+  "name": "@slave/core",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.2.0",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/ws": "^8.18.1",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^3.0.111",
+    "@ai-sdk/google": "^3.0.110",
+    "@ai-sdk/openai": "^4.0.43",
+    "@libsql/client": "^0.17.4",
+    "ai": "^7.0.68",
+    "cron-parser": "^5.10.0",
+    "drizzle-orm": "^0.45.2",
+    "screenshot-desktop": "^1.15.6",
+    "ws": "^8.21.3",
+    "zod": "^4.4.3"
+  }
+}
