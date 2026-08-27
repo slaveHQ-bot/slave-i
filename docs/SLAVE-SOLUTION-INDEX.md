@@ -59,7 +59,8 @@ The plan must never force replacement of a superior existing implementation.
 ├── skills/                         # skills/capabilities
 └── docs/
     ├── SLAVE-SOLUTION-INDEX.md     # this file — START HERE
-    ├── SLAVE-SOLUTION-BOOK.md       # phases + roadmap
+    ├── SLAVE-SOLUTION-BOOK.md      # phases + roadmap
+    ├── AGENT-CAPABILITY-SYNC.md    # cross-repository agent capability audit
     ├── AGENT-IMPLEMENTATION-PROTOCOL.md
     ├── FEATURE-REGISTRY.md
     ├── architecture/
@@ -69,13 +70,14 @@ The plan must never force replacement of a superior existing implementation.
     └── decisions/
 ```
 
-This map is a navigation baseline only. Never assume a file exists; inspect the current tree first. The repository currently contains `apps/desktop`, `packages/core`, `skills`, `task.md`, and workspace/package configuration. 
+This map is a navigation baseline only. Never assume a file exists; inspect the current tree first. The repository currently contains `apps/desktop`, `packages/core`, `skills`, `task.md`, and workspace/package configuration.
 
 ## What to Read
 
 | Work | Read first | Then inspect |
 |---|---|---|
 | Overall roadmap | `docs/SLAVE-SOLUTION-BOOK.md` | relevant phase + code |
+| Agent capability synchronization | `docs/AGENT-CAPABILITY-SYNC.md` | `.agents` source + implementation |
 | Agent implementation rules | `docs/AGENT-IMPLEMENTATION-PROTOCOL.md` | code + tests |
 | Feature requirements | `docs/FEATURE-REGISTRY.md` | actual implementation |
 | Existing full product spec | `task.md` | desktop/core |
@@ -87,6 +89,40 @@ This map is a navigation baseline only. Never assume a file exists; inspect the 
 | Architecture | `docs/architecture/`, `docs/decisions/` | actual code |
 | Testing | `docs/testing/` | test suites |
 | Release | `docs/operations/` | build/package scripts |
+
+## Agent Synchronization Contract
+
+The reusable agent-governance repository is `slaveHQ-bot/.agents`. Its registry and roadmap describe target capabilities; they do **not** prove runtime implementation.
+
+Every future agent audit must compare:
+
+`agent definition → capability/lifecycle contract → roadmap category → implementation → tests/evals → Solution Book`
+
+The current canonical `.agents` repository contains governance and capability documents but no discrete specialist-agent definition files in a dedicated agent directory. Until such definitions are discoverable, per-agent parity must be reported as `UNVERIFIED TARGET` rather than assumed.
+
+### Synchronized orchestration requirements
+
+The Solution Book must account for these agent-system requirements:
+
+- common specialist lifecycle: capabilities, health, plan, execute, observe, evaluate, cancel
+- capability-driven specialist selection using domain, tools, health, permissions, budget, dependencies, and evaluation history
+- structured specialist results containing status, output, evidence/artifacts, actions, tools, warnings, errors, quality signals, and recommended next action
+- sequential, parallel, conditional, dependent, retryable, approval-gated, scheduled, event-triggered, and human-escalated execution graphs
+- configurable time, model/token, tool-call, concurrency, retry, and output/artifact budgets
+- explicit failure taxonomy before automatic recovery
+- evidence-based multi-agent review and final conflict resolution owned by Master SLAVE
+
+These requirements are tracked in `docs/AGENT-CAPABILITY-SYNC.md` and must be mapped to implementation tasks before being marked complete.
+
+### Known limitations and exclusions
+
+- The agent registry is conceptual and cannot be treated as proof of implementation, registration, health, or test coverage.
+- No per-agent feature/limitation parity can be claimed until discrete agent definitions are available from the canonical agent source.
+- `docs/SLAVE-SOLUTION-BOOK.md` and `docs/SLAVE-SOLUTION-INDEX.md` are the implementation repository's canonical Solution Book documents; a generic `docs/SOLUTION_BOOK.md` or `docs/ROADMAP.md` must not be assumed to exist.
+- The roadmap is target state. Current implementation status requires code and verification evidence.
+- Concrete lifecycle method names, APIs, paths, registrations, and integrations must be verified in `slave-i` before implementation claims are made.
+- Automatic retry/repair must remain bounded and cannot bypass authorization, permissions, secrets controls, or safety policy.
+- Optional cloud and remote integrations must remain explicitly user-controlled and cannot become mandatory for local operation.
 
 ## Phase Index
 
@@ -246,4 +282,4 @@ Temporary assets may be used during development but must be marked provisional.
 
 ## Next Action for Any Agent
 
-Read this file → read the relevant phase/feature document → inspect the actual repository → trace the existing implementation → decide KEEP/MODIFY/REPLACE/CREATE → implement → wire → test → build → regression test → fix → document → commit.
+Read this file → read the relevant phase/feature document → read `docs/AGENT-CAPABILITY-SYNC.md` when agent behavior is involved → inspect the actual repository → trace the existing implementation → decide KEEP/MODIFY/REPLACE/CREATE → implement → wire → test → build → regression test → fix → document → commit.
