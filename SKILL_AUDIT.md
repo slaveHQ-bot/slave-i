@@ -36,8 +36,11 @@
 ## 6. Execution Model Summary
 - **Main Agent Authority**: CTO/Orchestrator manages the task graph and assigns skills. Specialists propose; Main Agent decides.
 - **Parallelization Model**: 2-4 implementation agents dynamically bound by RAM/CPU and file contention, managed by the Orchestrator.
-- **Verification Model**: Specialist reporting must contain task context and tests. The Main Agent controls the ACCEPT/REJECT gate. 
+- **Verification Model**: Specialist reporting must contain task context and tests. The Main Agent controls the ACCEPT/REJECT gate.
 - **Skill Evolution**: The repository itself is treated as engineering infrastructure. If a workflow fails, agents must propose improvements to the skills themselves.
 
-## 7. Unresolved Issues
-- None. The skill system is fully operational, normalized, and machine-readable.
+## 7. Audit Status
+
+The skill structure and registry were normalized as described above, but this document is not evidence that the wider SLAVE agent-runtime contract is fully implemented or that all canonical `.agents` capabilities are operational. The cross-repository audit records unresolved agent-runtime and taxonomy gaps in `docs/AGENT-CAPABILITY-SYNC.md`.
+
+Do not use this file to mark the overall SLAVE agent system as complete without code/test evidence.
