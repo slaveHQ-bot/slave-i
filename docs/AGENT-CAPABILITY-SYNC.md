@@ -25,6 +25,19 @@ The canonical `slaveHQ-bot/.agents` repository currently contains governance doc
 
 The current registry names these specialists: Master, Browser, Research, Scraper, Coding/Repo, Data, Finance, Creative, Image, Video, Audio, Documents, Reports, QA, Sales, Advisor, Personal Assistant, and Automation.
 
+The implementation repository does contain a real runtime registry under `packages/core/src/engine/AgentRegistry.ts` and concrete agent classes under `packages/core/src/engine/agents/`. The runtime taxonomy is not a 1:1 copy of the canonical registry: it currently includes control-plane/execution/productivity agents such as Task, Verification, Browser, Computer, Code, Research, File, Data, Creative, Communication, Knowledge, Integration, Security and Automation, with additional concrete classes such as Terminal and Coder present in the source tree.
+
+## Classification of current differences
+
+| Difference | Classification | Evidence / action |
+|---|---|---|
+| Canonical per-agent definition files are absent | `UNVERIFIED TARGET` | Registry/taxonomy can define targets, but no discrete canonical agent definitions were discoverable in `.agents`. |
+| Canonical lifecycle vs implementation | `IMPLEMENTATION GAP` | Canonical lifecycle is `capabilities → health → plan → execute → observe → evaluate → cancel`; `BaseSlave` currently provides metadata/tool hooks plus `executeSubtask()`, not that complete lifecycle. |
+| Canonical specialist names vs runtime class taxonomy | `DOCUMENTATION GAP` | Runtime has a different capability decomposition; no authoritative mapping from canonical IDs to runtime agent IDs exists yet. |
+| `AGENT_ROSTER.md` role catalog vs runtime specialists | `DOCUMENTATION GAP` | Roster contains CTO/Product/UX/engineering roles, while runtime registry contains executable `*Slave` classes. They should not be treated as the same taxonomy. |
+| `SKILL_AUDIT.md` says there are no unresolved issues | `CONFLICT` | The statement is not supported by the current runtime evidence and conflicts with the evidence-based Solution Book completion rule. |
+| Canonical target catalog repeated in implementation docs | `DUPLICATE` | The implementation Solution Book and synchronization record intentionally restate target specialist concepts for navigation; the implementation record must remain subordinate to code/test evidence. |
+
 ## Gaps synchronized into the Solution Book
 
 ### Agent lifecycle contract
@@ -33,7 +46,7 @@ Specialists are expected to expose a common conceptual lifecycle:
 
 `capabilities → health → plan → execute → observe → evaluate → cancel`
 
-Concrete method names must be discovered from the implementation before coding.
+Concrete method names must be discovered from the implementation before coding. The current runtime does not yet expose this full lifecycle as a common `BaseSlave` contract.
 
 ### Specialist selection
 
@@ -96,6 +109,8 @@ High-impact tasks may use independent planner/reviewer/evaluator roles. Review m
 1. The `.agents` capability registry lists `automation.slave`, while the agent-system specialist section does not describe Automation SLAVE. The registry and roadmap are treated as the target catalog; the missing specialist description is a documentation gap, not proof of implementation.
 2. The roadmap mentions Reports / Presentation SLAVE, while the capability registry currently lists Reports but not a separate Presentation specialist. Presentation remains a roadmap capability until a canonical registry entry and implementation are established.
 3. The implementation repository does not currently use the requested generic `docs/SOLUTION_BOOK.md` or `docs/ROADMAP.md` names. Its canonical documents are `docs/SLAVE-SOLUTION-INDEX.md` and `docs/SLAVE-SOLUTION-BOOK.md`; synchronization should use those files unless the repository structure is intentionally changed.
+4. `AGENT_ROSTER.md` is a role/capability planning catalog, not a runtime registry. Runtime truth is currently the code-level `AgentRegistry` and its registered concrete `BaseSlave` implementations.
+5. `SKILL_AUDIT.md` previously described the skill system as having no unresolved issues. That statement is now treated as a documentation conflict because current agent-runtime evidence still contains an implementation gap and taxonomy drift.
 
 ## Known limitations & exclusions
 
@@ -103,6 +118,8 @@ High-impact tasks may use independent planner/reviewer/evaluator roles. Review m
 - The capability registry is conceptual and must not be used as proof of runtime registration, health, or implementation status.
 - Roadmap entries are target-state requirements, not completed features.
 - Concrete lifecycle method names, paths, APIs, and registrations must be verified against `slave-i` before implementation.
+- The current runtime's `BaseSlave` contract is narrower than the canonical lifecycle contract and requires implementation work before lifecycle parity can be claimed.
+- Runtime specialist IDs/classes are not currently a 1:1 mapping to canonical specialist IDs; mapping must be documented before capability parity is claimed.
 - External content and specialist outputs remain untrusted and cannot override SLAVE safety, authorization, privacy, or system policy.
 - Automatic repair must never bypass permission or safety gates and must have bounded retries.
 - Optional cloud, remote MCP, plugins, and other remote integrations remain explicitly user-controlled and must not become mandatory for local operation.
@@ -112,12 +129,13 @@ High-impact tasks may use independent planner/reviewer/evaluator roles. Review m
 1. Discover all agent definitions available from the canonical agent source.
 2. Extract capabilities, constraints, lifecycle expectations, permissions, inputs/outputs, dependencies, and operational limits.
 3. Compare against `docs/SLAVE-SOLUTION-INDEX.md`, `docs/SLAVE-SOLUTION-BOOK.md`, and relevant architecture/security/testing documents.
-4. Classify each difference as `DUPLICATE`, `CONFLICT`, `DOCUMENTATION GAP`, `IMPLEMENTATION GAP`, or `UNVERIFIED TARGET`.
-5. Resolve terminology using the current SLAVE architecture.
-6. Update the smallest relevant Solution Book section and this synchronization record.
-7. Verify referenced paths and links.
-8. Run applicable documentation/code checks.
-9. Commit only verified changes with a descriptive `docs:` message.
+4. Inspect the actual runtime registry and implementation before making implementation claims.
+5. Classify each difference as `DUPLICATE`, `CONFLICT`, `DOCUMENTATION GAP`, `IMPLEMENTATION GAP`, or `UNVERIFIED TARGET`.
+6. Resolve terminology using the current SLAVE architecture.
+7. Update the smallest relevant Solution Book section and this synchronization record.
+8. Verify referenced paths and links.
+9. Run applicable documentation/code checks.
+10. Commit only verified changes with a descriptive `docs:` message.
 
 ## Source references
 
